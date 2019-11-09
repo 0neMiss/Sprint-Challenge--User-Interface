@@ -74,7 +74,7 @@ p {
 hr {
   border: 1px dashed black;
 }
-
+@media(min-width:468px){
 .aboutboxcontainer {
   display: flex;
   flex-flow: wrap;
@@ -93,8 +93,11 @@ hr {
   border: black solid;
   border-radius: 10px;
   padding: 10px 20px;
+	cursor: pointer;
 }
-
+.aboutbox button:hover{
+		animation: bounce 1s;
+}
 .aboutbox h2 {
   padding: 5px;
 }
@@ -307,3 +310,17 @@ footer nav a {
   color: white;
   text-decoration: none;
 }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(0px, -5px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
